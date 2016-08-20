@@ -1,0 +1,9 @@
+FROM mhart/alpine-node:latest
+
+EXPOSE 3000
+WORKDIR /app
+
+ENV NODE_ENV development
+
+ADD package.json /app
+RUN npm install
